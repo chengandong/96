@@ -1,0 +1,53 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    font-family: Arial, Helvetica, sans-serif;
+    /* 内减盒子 */
+    box-sizing: border-box;
+}
+
+body{
+    font-size: 12px;
+}
+
+li {
+    list-style: none;
+}
+
+img{
+    vertical-align: middle;/* 图片居中 */
+}
+
+a {
+    color: #000;
+    /* 取消a标签默认下划线 */
+    text-decoration: none;
+}
+
+input {
+    border: 0 none;
+    outline-style: none; /*取消内边框*/
+}
+
+/* 浮动 */
+
+.fl{
+    float: left;
+}
+
+.fr{
+    float: right;
+}
+
+/* 清除浮动，解决margin-top塌陷 */
+.clearfix:after {
+    content: "";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+
+.celarfix {
+    zoom: 1;
+}

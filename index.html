@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>数据可视化</title>
+    <!-- 引入 基本 样式 -->
+    <link rel="stylesheet" href="./css/base.css">
+    <!-- 引入 首页 样式 -->
+    <link rel="stylesheet" href="./css/index.css">
+    <!-- 引入 字体图标 对应的 css文件 -->
+    <link rel="stylesheet" href="./fonts/icomoon.css">
+
+    <!-- 引入 echarts 表格 -->
+    <script src="./js/echarts.js"></script>
+    <!-- 引入 中国地图 -->
+    <script src="./js/china.js"></script>
+    <!-- 引入 jQuery 文件 -->
+    <script src="./js/jquery-1.12.4.js"></script>
+    <!-- 引入 首页js -->
+    <script src="./js/index.js"></script>
+
+</head>
+
+<body>
+
+    <!-- 版心 -->
+    <div class="container">
+        <!-- 第一列 -->
+        <div class="column">
+            <!-- 1.1 数据概览 -->
+            <div class="overview panel">
+                <div class="inner">
+                    <ul>
+                        <li>
+                            <p>2,190</p>
+                            <span><i class="icon-dot"></i>设备总数</span>
+                        </li>
+                        <li>
+                            <p>190</p>
+                            <span><i class="icon-dot"></i>季度新增</span>
+                        </li>
+                        <li>
+                            <p>3,001</p>
+                            <span><i class="icon-dot"></i>运营设备</span>
+                        </li>
+                        <li>
+                            <p>108</p>
+                            <span><i class="icon-dot"></i>异常设备</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <!-- 1.2 故障设备监控 -->
+            <div class="monitor panel">
+                <div class="inner">
+                    <!-- tab栏 切换 -->
+                    <div class="tabs">
+                        <a href="javascript:;" class="active">故障设备监控</a>
+                        <a href="javascript:;">异常设备监控</a>
+                    </div>
+                    <!-- 内容 主体部分 -->
+                    <div class="content">
+                        <div class="head">
+                            <span>故障时间</span>
+                            <span>故障地址</span>
+                            <span>故障代码</span>
+                        </div>
+                        <!-- 轮播 部分 -->
+                        <div class="carousel">
+                            <ul>
+                                <li>
+                                    <span>20200308</span>
+                                    <span>内蒙古乌兰察布市察哈尔右翼前旗土贵乌拉镇村里人家饭店</span>
+                                    <span>100001</span>
+                                </li>
+                                <li>
+                                    <span>20200308</span>
+                                    <span>内蒙古乌兰察布市察哈尔右翼前旗土贵乌拉镇村里人家饭店</span>
+                                    <span>100002</span>
+                                </li>
+                                <li>
+                                    <span>20200308</span>
+                                    <span>内蒙古乌兰察布市察哈尔右翼前旗土贵乌拉镇村里人家饭店</span>
+                                    <span>100003</span>
+                                </li>
+                                <li>
+                                    <span>20200308</span>
+                                    <span>内蒙古乌兰察布市察哈尔右翼前旗土贵乌拉镇村里人家饭店</span>
+                                    <span>100004</span>
+                                </li>
+                                <li>
+                                    <span>20200308</span>
+                                    <span>内蒙古乌兰察布市察哈尔右翼前旗土贵乌拉镇村里人家饭店</span>
+                                    <span>100005</span>
+                                </li>
+                                <li>
+                                    <span>20200308</span>
+                                    <span>内蒙古乌兰察布市察哈尔右翼前旗土贵乌拉镇村里人家饭店</span>
+                                    <span>100006</span>
+                                </li>
+                                <li>
+                                    <span>20200308</span>
+                                    <span>内蒙古乌兰察布市察哈尔右翼前旗土贵乌拉镇村里人家饭店</span>
+                                    <span>100007</span>
+                                </li>
+                                <li>
+                                    <span>20200308</span>
+                                    <span>内蒙古乌兰察布市察哈尔右翼前旗土贵乌拉镇村里人家饭店</span>
+                                    <span>100008</span>
+                                </li>
+                                <li>
+                                    <span>20200308</span>
+                                    <span>内蒙古乌兰察布市察哈尔右翼前旗土贵乌拉镇村里人家饭店</span>
+                                    <span>100009</span>
+                                </li>
+                                <li>
+                                    <span>20200308</span>
+                                    <span>内蒙古乌兰察布市察哈尔右翼前旗土贵乌拉镇村里人家饭店</span>
+                                    <span>100010</span>
+                                </li>
+                                <li>
+                                    <span>20200308</span>
+                                    <span>内蒙古乌兰察布市察哈尔右翼前旗土贵乌拉镇村里人家饭店</span>
+                                    <span>100011</span>
+                                </li>
+                                <li>
+                                    <span>20200308</span>
+                                    <span>内蒙古乌兰察布市察哈尔右翼前旗土贵乌拉镇村里人家饭店</span>
+                                    <span>100012</span>
+                                </li>
+                                <li>
+                                    <span>20200308</span>
+                                    <span>内蒙古乌兰察布市察哈尔右翼前旗土贵乌拉镇村里人家饭店</span>
+                                    <span>100013</span>
+                                </li>
+                                <li>
+                                    <span>20200308</span>
+                                    <span>内蒙古乌兰察布市察哈尔右翼前旗土贵乌拉镇村里人家饭店</span>
+                                    <span>100014</span>
+                                </li>
+                                <li>
+                                    <span>20200308</span>
+                                    <span>内蒙古乌兰察布市察哈尔右翼前旗土贵乌拉镇村里人家饭店</span>
+                                    <span>100015</span>
+                                </li>
+                                <li>
+                                    <span>20200308</span>
+                                    <span>内蒙古乌兰察布市察哈尔右翼前旗土贵乌拉镇村里人家饭店</span>
+                                    <span>100001</span>
+                                </li>
+                                <li>
+                                    <span>20200308</span>
+                                    <span>内蒙古乌兰察布市察哈尔右翼前旗土贵乌拉镇村里人家饭店</span>
+                                    <span>100002</span>
+                                </li>
+                                <li>
+                                    <span>20200308</span>
+                                    <span>内蒙古乌兰察布市察哈尔右翼前旗土贵乌拉镇村里人家饭店</span>
+                                    <span>100003</span>
+                                </li>
+                                <li>
+                                    <span>20200308</span>
+                                    <span>内蒙古乌兰察布市察哈尔右翼前旗土贵乌拉镇村里人家饭店</span>
+                                    <span>100004</span>
+                                </li>
+                                <li>
+                                    <span>20200308</span>
+                                    <span>内蒙古乌兰察布市察哈尔右翼前旗土贵乌拉镇村里人家饭店</span>
+                                    <span>100005</span>
+                                </li>
+                                <li>
+                                    <span>20200308</span>
+                                    <span>内蒙古乌兰察布市察哈尔右翼前旗土贵乌拉镇村里人家饭店</span>
+                                    <span>100006</span>
+                                </li>
+                                <li>
+                                    <span>20200308</span>
+                                    <span>内蒙古乌兰察布市察哈尔右翼前旗土贵乌拉镇村里人家饭店</span>
+                                    <span>100007</span>
+                                </li>
+                                <li>
+                                    <span>20200308</span>
+                                    <span>内蒙古乌兰察布市察哈尔右翼前旗土贵乌拉镇村里人家饭店</span>
+                                    <span>100008</span>
+                                </li>
+                                <li>
+                                    <span>20200308</span>
+                                    <span>内蒙古乌兰察布市察哈尔右翼前旗土贵乌拉镇村里人家饭店</span>
+                                    <span>100009</span>
+                                </li>
+                                <li>
+                                    <span>20200308</span>
+                                    <span>内蒙古乌兰察布市察哈尔右翼前旗土贵乌拉镇村里人家饭店</span>
+                                    <span>100010</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- 隐藏部分 -->
+                    <div class="content" style="display: none;">
+                        <div class="head">
+                            <span>异常时间</span>
+                            <span>异常地址</span>
+                            <span>异常代码</span>
+                        </div>
+                        <!-- 轮播 部分 -->
+                        <div class="carousel">
+                            <ul>
+                                <li>
+                                    <span>20200310</span>
+                                    <span>内蒙古呼和浩特市玉泉区昭君路内蒙古大学创业学院</span>
+                                    <span>100001</span>
+                                </li>
+                                <li>
+                                    <span>20200310</span>
+                                    <span>内蒙古呼和浩特市玉泉区昭君路内蒙古大学创业学院</span>
+                                    <span>100002</span>
+                                </li>
+                                <li>
+                                    <span>20200310</span>
+                                    <span>内蒙古呼和浩特市玉泉区昭君路内蒙古大学创业学院</span>
+                                    <span>100003</span>
+                                </li>
+                                <li>
+                                    <span>20200310</span>
+                                    <span>内蒙古呼和浩特市玉泉区昭君路内蒙古大学创业学院</span>
+                                    <span>100004</span>
+                                </li>
+                                <li>
+                                    <span>20200310</span>
+                                    <span>内蒙古呼和浩特市玉泉区昭君路内蒙古大学创业学院</span>
+                                    <span>100005</span>
+                                </li>
+                                <li>
+                                    <span>20200310</span>
+                                    <span>内蒙古呼和浩特市玉泉区昭君路内蒙古大学创业学院</span>
+                                    <span>100006</span>
+                                </li>
+                                <li>
+                                    <span>20200310</span>
+                                    <span>内蒙古呼和浩特市玉泉区昭君路内蒙古大学创业学院</span>
+                                    <span>100007</span>
+                                </li>
+                                <li>
+                                    <span>20200310</span>
+                                    <span>内蒙古呼和浩特市玉泉区昭君路内蒙古大学创业学院</span>
+                                    <span>100008</span>
+                                </li>
+                                <li>
+                                    <span>20200310</span>
+                                    <span>内蒙古呼和浩特市玉泉区昭君路内蒙古大学创业学院</span>
+                                    <span>100009</span>
+                                </li>
+                                <li>
+                                    <span>20200310</span>
+                                    <span>内蒙古呼和浩特市玉泉区昭君路内蒙古大学创业学院</span>
+                                    <span>100010</span>
+                                </li>
+                                <li>
+                                    <span>20200310</span>
+                                    <span>内蒙古呼和浩特市玉泉区昭君路内蒙古大学创业学院</span>
+                                    <span>100011</span>
+                                </li>
+                                <li>
+                                    <span>20200310</span>
+                                    <span>内蒙古呼和浩特市玉泉区昭君路内蒙古大学创业学院</span>
+                                    <span>100012</span>
+                                </li>
+                                <li>
+                                    <span>20200310</span>
+                                    <span>内蒙古呼和浩特市玉泉区昭君路内蒙古大学创业学院</span>
+                                    <span>100013</span>
+                                </li>
+                                <li>
+                                    <span>20200310</span>
+                                    <span>内蒙古呼和浩特市玉泉区昭君路内蒙古大学创业学院</span>
+                                    <span>100014</span>
+                                </li>
+                                <li>
+                                    <span>20200310</span>
+                                    <span>内蒙古呼和浩特市玉泉区昭君路内蒙古大学创业学院</span>
+                                    <span>100015</span>
+                                </li>
+                                <li>
+                                    <span>20200310</span>
+                                    <span>内蒙古呼和浩特市玉泉区昭君路内蒙古大学创业学院</span>
+                                    <span>100001</span>
+                                </li>
+                                <li>
+                                    <span>20200310</span>
+                                    <span>内蒙古呼和浩特市玉泉区昭君路内蒙古大学创业学院</span>
+                                    <span>100002</span>
+                                </li>
+                                <li>
+                                    <span>20200310</span>
+                                    <span>内蒙古呼和浩特市玉泉区昭君路内蒙古大学创业学院</span>
+                                    <span>100003</span>
+                                </li>
+                                <li>
+                                    <span>20200310</span>
+                                    <span>内蒙古呼和浩特市玉泉区昭君路内蒙古大学创业学院</span>
+                                    <span>100004</span>
+                                </li>
+                                <li>
+                                    <span>20200310</span>
+                                    <span>内蒙古呼和浩特市玉泉区昭君路内蒙古大学创业学院</span>
+                                    <span>100005</span>
+                                </li>
+                                <li>
+                                    <span>20200310</span>
+                                    <span>内蒙古呼和浩特市玉泉区昭君路内蒙古大学创业学院</span>
+                                    <span>100006</span>
+                                </li>
+                                <li>
+                                    <span>20200310</span>
+                                    <span>内蒙古呼和浩特市玉泉区昭君路内蒙古大学创业学院</span>
+                                    <span>100007</span>
+                                </li>
+                                <li>
+                                    <span>20200310</span>
+                                    <span>内蒙古呼和浩特市玉泉区昭君路内蒙古大学创业学院</span>
+                                    <span>100008</span>
+                                </li>
+                                <li>
+                                    <span>20200310</span>
+                                    <span>内蒙古呼和浩特市玉泉区昭君路内蒙古大学创业学院</span>
+                                    <span>100009</span>
+                                </li>
+                                <li>
+                                    <span>20200310</span>
+                                    <span>内蒙古呼和浩特市玉泉区昭君路内蒙古大学创业学院</span>
+                                    <span>100010</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+            <!-- 1.3 定位分布统计 -->
+            <div class="point panel">
+                <div class="inner">
+                    <h3>点位分布统计</h3>
+                    <div class="echarts">
+                        <!-- 饼状图 -->
+                        <div class="pie"></div>
+                        <div class="date">
+                            <div class="item">
+                                <p>320,11</p>
+                                <span><i class="icon-dot" style="color: #ed3f35;"></i>点位总数</span>
+                            </div>
+                            <div class="item">
+                                <p>418</p>
+                                <span><i class="icon-dot" style="color: #eacf19;"></i>本月新增</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 第二列 -->
+        <div class="column">
+            <!-- 2.1 设备数据统计 -->
+            <div class="map">
+                <!-- 2.1.1 设备数据统计 -->
+                <h3><i class="icon-cube"></i>设备数据统计</h3>
+                <!-- 2.1.2 echarts 图标 -->
+                <div class="echarts">
+                    <div class="geo"></div>
+                </div>
+            </div>
+            <!-- 2.2 全国用户总量统计 -->
+            <div class="user panel">
+                <div class="inner">
+                    <h3>全国用户总量统计</h3>
+                    <!-- 图表 -->
+                    <div class="echarts">
+                        <!-- 柱状图 -->
+                        <div class="barChart"></div>
+                        <!-- 数据 -->
+                        <div class="date">
+                            <div class="item">
+                                <p>120,899</p>
+                                <span><i class="icon-dot" style="color: #ed3f35;"></i>用户总量</span>
+                            </div>
+                            <div class="item">
+                                <p>248</p>
+                                <span><i class="icon-dot" style="color: #eacf19;"></i>本月新增</span>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <!-- 第三列 -->
+        <div class="column">
+            <!-- 3.1 订单量和销售额 -->
+            <div class="order panel">
+                <div class="inner">
+                    <!-- 头部 -->
+                    <div class="head">
+                        <a href="javascript:;">365天</a>
+                        <span></span>
+                        <a href="javascript:;">90天</a>
+                        <span></span>
+                        <a href="javascript:;" class="active">30天</a>
+                        <span></span>
+                        <a href="javascript:;">24小时</a>
+                    </div>
+                    <!-- 数据 -->
+                    <div class="date">
+                        <div class="item">
+                            <p>1,987</p>
+                            <span><i class="icon-dot" style="color: #ed3f35;"></i>订单量</span>
+                        </div>
+                        <div class="item">
+                            <p>3834</p>
+                            <span><i class="icon-dot" style="color: #eacf19;"></i>销售额</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- 3.2 销售额统计 -->
+            <div class="sales panel">
+                <div class="inner">
+                    <!-- 头部 -->
+                    <div class="head">
+                        <span>销售额统计</span>
+                        <a href="javascript:void(0)">年</a>
+                        <a href="javascript:void(0)">季</a>
+                        <a href="javascript:void(0)" class="active">月</a>
+                        <a href="javascript:void(0)">周</a>
+                    </div>
+                    <!-- 图标 -->
+                    <div class="echarts">
+                        <!-- 线状图 -->
+                        <div class="line"></div>
+                    </div>
+                </div>
+            </div>
+            <!-- 3.3 渠道分布 & 一季度销售进度 -->
+            <div class="wrap clearfix">
+                <!-- 3.3.1 左边 渠道分布-->
+                <div class="channel panel fl">
+                    <div class="inner">
+                        <h3>渠道分布</h3>
+                        <!-- 数据 -->
+                        <div class="date">
+                            <div class="item">
+                                <p><b>39</b><small>%</small></p>
+                                <span><i class="icon-plane"></i>机场</span>
+                            </div>
+                            <div class="item">
+                                <p><b>28</b><small>%</small></p>
+                                <span><i class="icon-bag"></i>商场</span>
+                            </div>
+                            <div class="item">
+                                <p><b>20</b><small>%</small></p>
+                                <span><i class="icon-train"></i>地铁</span>
+                            </div>
+                            <div class="item">
+                                <p><b>13</b><small>%</small></p>
+                                <span><i class="icon-bus"></i>火车站</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- 3.3.2 右边 一季度销售进度-->
+                <div class="quarter panel fr">
+                    <div class="inner">
+                        <h3>一季度销售进度</h3>
+                        <div class="echarts">
+                            <div class="loop"></div>
+                            <div class="show"><b>75</b><small>%</small></div>
+                        </div>
+                        <!-- 数据 -->
+                        <div class="date">
+                            <div class="items">
+                                <p>1,321</p>
+                                <span><i class="icon-dot" style="color: #6acca3;"></i>销售额</span>
+                            </div>
+                            <div class="items">
+                                <p>150%</p>
+                                <span><i class="icon-dot" style="color: #ed3f35;"></i>同比增长</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- 3.4 全国热榜 & 各省热销 -->
+            <div class=" hot panel">
+                <div class="inner">
+                    <!-- 左 全国热搜 -->
+                    <div class="all">
+                        <h3>全国热榜</h3>
+                        <div class="cup">
+                            <p><i class="icon-cup1" style="color: #d93f36;"></i><span>可爱多</span></p>
+                            <p><i class="icon-cup2" style="color: #68d8fe;"></i><span>哇哈哈</span></p>
+                            <p><i class="icon-cup3" style="color: #4c9bfd;"></i><span>喜之多</span></p>
+                        </div>
+                    </div>
+                    <!-- 右 各省热销-->
+                    <div class="province">
+                        <h3 class="clearfix">
+                            <span>各省热销</span>
+                            <b>//近30日//</b>
+                        </h3>
+                        <ul class="city">
+                            <li class="active">
+                                <span>北京</span><b>25,179</b><i class="icon-up"></i>
+                            </li>
+                            <li>
+                                <span>河北</span><b>23,252</b><i class="icon-down"></i>
+                            </li>
+                            <li>
+                                <span>上海</span><b>20,726</b><i class="icon-up"></i>
+                            </li>
+                            <li>
+                                <span>江苏</span><b>18,654</b><i class="icon-down"></i>
+                            </li>
+                            <li>
+                                <span>山东</span><b>16,123</b><i class="icon-up"></i>
+                            </li>
+                        </ul>
+                        <ul class="product">
+                            <li>
+                                <span>八喜</span><b>8,564</b><i class="icon-up"></i>
+                            </li>
+                            <li>
+                                <span>好多鱼</span><b>2,156</b><i class="icon-up"></i>
+                            </li>
+                            <li>
+                                <span>哇哈哈</span><b>8,341</b><i class="icon-up"></i>
+                            </li>
+                            <li>
+                                <span>可爱多</span><b>9,086</b><i class="icon-up"></i>
+                            </li>
+                            <li>
+                                <span>喜之郎</span><b>7,407</b><i class="icon-up"></i>
+                            </li>
+                            <li>
+                                <span>好多鱼</span><b>2,710</b><i class="icon-up"></i>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

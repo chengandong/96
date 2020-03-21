@@ -1,0 +1,623 @@
+
+/* 首页 样式 */
+
+body {  
+    background: url('../images/bg.jpg') no-repeat;
+    background-size: cover;
+}
+/* 版心-盒子 */
+.container {
+    min-width: 1000px;
+    max-width: 2700px;
+    min-height: 1000px;
+    background: url(../images/logo.png) no-repeat;
+    background-size: contain;
+    padding: 85px 20px 0;
+    display: flex;
+}
+
+/* 面板 样式 */
+.panel {
+    position: relative;
+    border: 1px solid red;
+    border-width: 51px 38px 22px 130px;
+    /* 51 38 22 130 */
+    /* border-image: url('../images/border.png');
+    border-image-slice: 51 38 22 130;
+    border-image-width: 51px 38px 22px 130px;
+    border-image-repeat: stretch; */
+    /* 连写  */
+    border-image: url(../images/border.png) 51 38 22 130 stretch;
+}
+
+.inner {
+    position: absolute;
+    top: -51px;
+    left: -130px;
+    right: -38px;
+    bottom: -22px;
+    /* 上下20px, 左右30px */
+    padding:20px 30px;
+}
+
+/* ----------第一列 -------------- */
+.column:nth-child(1) {
+    flex: 3;
+}
+
+/* 1.1 数据概览 */
+.overview{
+    height: 110px;
+
+}
+.overview .inner{
+    padding-left: 39px;
+    padding-right: 36px;
+
+}
+
+.overview li {
+    float: left;
+    width: 25%;
+    margin-top: 12px;
+    text-align: center;
+}
+
+.overview li p {
+    font-size: 22px;
+    color: #fff;
+    margin-bottom: 12px;
+}
+
+.overview li span {
+    color: #4c9bfd;
+}
+
+.overview li:nth-child(1) span i {
+    color: #006cff;
+}
+
+.overview li:nth-child(2) span i {
+    color: #6acca3;
+}
+
+.overview li:nth-child(3) span i {
+    color: #6acca3;
+}
+
+.overview li:nth-child(4) span i {
+    color: #ed3f35;
+}
+
+/* 1.2 故障设备监控 */
+.monitor {
+    height: 476px;
+    margin-top: 20px;
+}
+
+/* tab栏 切换 */
+.monitor .tabs {
+    margin-top: 10px;
+}
+
+.monitor .tabs a {
+    font-size: 18px;
+    color: #0223b9;
+}
+
+.monitor .tabs a.active {
+    color: #fff;
+}
+
+.monitor .tabs a:nth-child(1) {
+    padding-right: 14px;
+    border-right: 2px solid #00f2f1;
+    margin-right: 10px;
+}
+
+.monitor .content {
+    margin-top: 15px;
+    height: 400px;
+}
+
+.monitor .content .head {
+    height: 38px;
+    line-height: 38px;
+    background-color: rgba(255,255,255,.1);
+    margin-left: -30px;
+    margin-right: -30px;
+    padding-left: 30px;
+}
+
+.monitor .content .head span {
+    width: 25%;
+    float: left;
+    font-size: 14px;
+    color: #68d8fe;
+}
+
+.monitor .content .head span:nth-child(2) {
+    width: 50%;
+}
+
+.carousel {
+    height: 360px;
+    overflow: hidden;
+    margin-left: -30px;
+    margin-right: -30px;
+    position: relative;
+}
+.carousel ul {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+}
+.carousel li {
+    height: 36px;
+    line-height: 36px;
+    color: #538fdb;
+    padding-left: 30px;
+}
+
+.carousel li.active {
+    background-color: rgba(255,255,255,.1);
+    color: #68d8fe;
+
+}
+
+.carousel li span {
+    width: 25%;
+    float: left;
+}
+
+.carousel li span:nth-child(2) {
+    width: 50%;
+    white-space: nowrap;
+    /* 超出隐藏 */
+    overflow: hidden;
+    /* 超出显示省略号 */
+    text-overflow:ellipsis;
+}
+
+.carousel li span:nth-child(3) {
+    padding-left: 26px;
+}
+
+/* 1.3 定位分布统计 */
+.point {
+    height: 337px;
+    margin-top: 20px;
+}
+
+.point h3 {
+    font-size: 20px;
+    color: #fff;
+}
+
+/* 饼状图 */
+.point .echarts {
+    height: 240px;
+    margin-top: 22px;
+}
+
+.point .echarts .pie {
+    float: left;
+    width: 65%;
+    height: 100%;
+    background-color: rgba(255,255,255,.1);
+}
+
+.point .echarts .date {
+    float: left;
+    height: 100%;
+    width: 35%;
+    background: url(../images/rect.png);
+}
+
+.point .echarts .date .item {
+    height: 50%;
+    padding-left: 30px;
+}
+
+.point .echarts .date .item:nth-child(1) {
+    margin-top: 30px;
+}
+
+.point .echarts .date .item p {
+    margin-bottom: 10px;
+    font-size: 24px;
+    color: #fff;
+    font-weight: bold;
+}
+
+.point .echarts .date .item span {
+    font-size: 14px;
+    color: #4c9bfd;
+}
+
+.point .echarts .date i {
+    margin-right: 5px;
+}
+
+
+
+/* -----------第二列 -----------*/
+.column:nth-child(2) {
+    flex: 4;
+    padding: 0 20px;
+}
+
+/* 2.1 设备数据统计 */
+.map {
+    margin-top: 16px;
+}
+
+/* 2.1.1 设备数据统计 */
+.map h3 {
+    font-size: 22px;
+    color: #fff;
+}
+.map h3 i {
+    color: #68d8fe;
+}
+
+/* 2.1.2 echarts 图标 */
+.map .echarts {
+    height: 544px;
+    margin-top: 17px;
+    background-color: rgba(255,255,255,.1);
+}
+
+.map .echarts .geo {
+    width: 100%;
+    height: 100%;
+}
+/* 2.2 全国用户总量统计 */
+.user {
+    height: 339px;
+    margin-top: 20px;
+}
+
+.user h3 {
+    font-size: 20px;
+    color: #fff;
+}
+
+.user .echarts {
+    height: 245px;
+    margin-top: 10px;
+}
+/* 柱状图 */
+.user .barChart {
+    float: left;
+    width: 70%;
+    height: 100%;
+    background-color: rgba(255,255,255,.1);
+}
+
+/* 数据 */
+.user .date {
+    float: left;
+    width: 30%;
+    height: 100%;
+    background: url(../images/rect.png);
+}
+
+.user .date .item {
+    height: 50%;
+    text-align: center;
+}
+
+.user .date .item:nth-child(1) {
+    margin-top: 30px;
+}
+
+.user .date .item p {
+    margin-bottom: 10px;
+    font-size: 26px;
+    color: #fff;
+    font-weight: bold;
+}
+
+.user .date .item span {
+    font-size: 14px;
+    color: #4c9bfd;
+}
+
+.user .date i {
+    margin-right: 5px;
+}
+
+
+
+/* -----------第三列 -----------*/
+.column:nth-child(3) {
+    flex: 3;
+}
+
+/* 3.1 订单量和销售额 */
+.order {
+    height: 148px;
+}
+
+.order .head {
+    height: 22px;
+    font-size: 18px;  
+}
+
+.order .head a {
+    float: left;
+    color: #1950c4;
+}
+
+.order .head a.active {
+    font-size: 20px;
+    color: #fff;
+}
+
+.order .head span {
+    float: left;
+    width: 2px;
+    height: 20px;
+    background-color: #00f2f1;
+    margin: 0 15px;
+    margin-top: 2px;
+}
+/* 数据 */
+.order .date {
+    height: 80px;
+    margin-top: 20px;
+}
+.order .date .item {
+    float: left;
+    width: 50%;
+    height: 100%;
+}
+
+.order .date .item p {
+    font-size: 22px;
+    color: #fff;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.order .date .item span {
+    font-size: 14px;
+    color: #4c9bfd;
+}
+
+
+/* 3.2 销售额统计 */
+.sales {
+    height: 247px;
+    margin-top: 20px;
+}
+/* 头部 */
+.sales .head span {
+    font-size: 20px;
+    color: #fff;
+    border-right: 2px solid #00f2f1;
+    padding-right: 15px;
+}
+.sales .head a {
+    font-size: 16px;
+    color: #0bace6;
+    padding: 4px;
+    margin-left: 20px;
+}
+
+.sales .head a.active {
+    color: #fff;
+    background-color: #4c9bfd;
+    border-radius: 5px;
+}
+
+.sales .echarts {
+    height: 155px;
+    margin-top: 10px;
+    background-color: rgba(255,255,255,.1);
+}
+.sales .echarts .line {
+    width: 100%;
+    height: 100%;
+}
+/* 3.3 渠道分布 & 一季度销售进度 */
+.column:nth-child(3) .wrap {
+    margin-top: 20px;
+}
+/* 3.3.1 左边 渠道分布 */
+.column:nth-child(3) .wrap .channel {
+    width: 48%;
+    height: 232px;
+}
+
+.channel h3 {
+    font-size: 20px;
+    color: #fff;
+}
+.channel .date {
+    margin-top: 20px;
+}
+.channel .item {
+    float: left;
+    width: 50%;
+}
+.channel .item:nth-child(3),
+.channel .item:nth-child(4){
+    margin-top: 25px;
+}
+.channel .item p {
+    margin-bottom: 8px;
+}
+.channel .item p b {
+    font-size: 28px;
+    color: #fff;
+}
+.channel .item p small {
+    font-size: 16px;
+    color: #fff;
+    margin-left: 5px;
+}
+.channel .item span {
+    color: #4c9bfd;
+
+}
+/* 3.3.2 右边 一季度销售进度 */
+.column:nth-child(3) .wrap .quarter {
+    width: 48%;
+    height: 232px;
+}
+
+.quarter h3 {
+    font-size: 20px;
+    color: #fff;
+}
+
+.quarter .echarts {
+    position: relative;
+    height: 82px;
+    margin-top: 5px;
+    background-color: rgba(255,255,255,.1);
+}
+
+.quarter .echarts .loop {
+    width: 100%;
+    height: 100%;
+}
+/* 绝对 定位 */
+.quarter .echarts .show {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-30%);
+    color: #fff;
+}
+.quarter .echarts .show b {
+    font-size: 18px; 
+}
+.quarter .echarts .show small {
+    font-size: 14px;
+    margin-left: 5px;
+}
+/* 数据 */
+
+.quarter .date {
+    margin-top: 20px;
+}
+.quarter .date .items {
+    float: left;
+    width: 50%;
+}
+.quarter .date .items p {
+    font-size: 18px;
+    color: #fff;
+}
+.quarter .date .items span {
+    color: #4c9bfd;
+}
+/* 3.4 全国热榜 & 各省热销 */
+.hot {
+    height: 282px;
+    margin-top: 20px;
+}
+/* 左 全国热搜  */
+.hot .all {
+    float: left;
+    width: 30%;
+}
+.hot .all h3 {
+    font-size: 20px;
+    color: #fff;
+}
+.hot .all .cup {
+    height: 194px;
+    margin-top: 10px;
+}
+.hot .all .cup p {
+    height: 33.33%;
+    padding-top: 20px;
+}
+.hot .all .cup p i {
+    font-size: 30px;
+    vertical-align: middle;
+}
+.hot .all .cup p span {
+    margin-left: 10px;
+    color: #fff;
+}
+/* 右 各省热销 */
+.hot .province {
+    float: left;
+    width: 70%;
+}
+
+.hot .province h3 span {
+    float: left;
+    font-size: 20px;
+    color: #fff;
+}
+
+.hot .province h3 b {
+    float: right;
+    color: #0bace6;
+    margin-top: 5px;
+}
+
+.hot .province .city {
+    float: left;
+    width: 50%;
+    margin-top: 20px;
+}
+.hot .province .city li {
+    height: 32px;
+    line-height: 32px;
+    color: #4995f4;
+}
+
+.hot .province .city li.active {
+    color: #a3c6f2;
+    background-color: rgba(255,255,255,.1);
+}
+
+.hot .province .city li span {
+    display: inline-block;
+    width: 50%;
+}
+.hot .province .city li b {
+    display: inline-block;
+    width: 35%;
+}
+.hot .province .city li i {
+    display: inline-block;
+    width: 15%;
+    color: #dc3c33;
+}
+.hot .province .city li:nth-child(2n) i {
+    color: #36be90;
+}
+.hot .province .product {
+    float: left;
+    width: 50%;
+    margin-top: 20px;
+    background-color: rgba(255,255,255,.1);
+}
+
+.hot .province .product li {
+    height: 32px;
+    line-height: 32px;
+    color: #52ffff;
+}
+.hot .province .product li span {
+    display: inline-block;
+    width: 50%;
+}
+.hot .province .product li b {
+    display: inline-block;
+    width: 35%;
+}
+.hot .province .product li i {
+    display: inline-block;
+    width: 15%;
+    color: #d93b33;
+}
